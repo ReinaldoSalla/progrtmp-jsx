@@ -12,7 +12,7 @@
 }
 
 .navbar__modal--button {
-  /* border: 1px solid black; */
+  border: 1px solid transparent;
 }
 
 .navbar__modal--area {
