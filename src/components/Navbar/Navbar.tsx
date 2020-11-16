@@ -26,9 +26,7 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <aside          
-                className='navbar__modal--features'
-              >
+              <aside className='navbar__modal--features'>
                 {new Array(10).fill(0).map((_, index) => (
                   <a key={index} href='/#'>
                     Feature #{index + 1}
@@ -38,7 +36,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <input placeholder='Search features' />
+        <input aria-label='Search features' placeholder='Search features' />
         <a className='navbar__button' href='/#'>
           Log In
         </a>
