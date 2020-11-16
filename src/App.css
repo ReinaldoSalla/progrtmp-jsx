@@ -7,3 +7,19 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: inherit;
+  background: none;
+}

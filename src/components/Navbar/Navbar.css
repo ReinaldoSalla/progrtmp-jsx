@@ -11,11 +11,38 @@
   position: relative;
 }
 
-.navbar__modal {
+.navbar__modal--button {
+  /* border: 1px solid black; */
+}
+
+.navbar__modal--area {
+  position: absolute;
+  padding-top: 1em;
+}
+
+.navbar__modal--features {
+  padding: 1em;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  /* top: 30px; */
-  width: 100px;
+  width: 150px;
   border: 1px solid black;
+}
+
+.navbar__modal--features a:nth-of-type(n) {
+  margin: 1em 0;
+}
+
+.navbar__button {
+  background: lightblue;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: opacity 500ms;
+}
+
+.navbar__button:hover {
+  opacity: 0.8;
+}
+
+.navbar__button:active {
+  opacity: 0.5;
 }

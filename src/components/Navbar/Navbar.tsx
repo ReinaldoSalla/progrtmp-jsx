@@ -12,36 +12,37 @@ const Navbar = () => {
     <header>
       <nav className='navbar__main-wrapper'>
         <a href='/#'>CompanyName</a>
-        <input placeholder='Find features' />
         <div className='navbar__modal-wrapper'>         
-          <button
+          <button 
+            className='navbar__modal--button'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           > 
-            Feature #1  
+            Features
           </button>
           {isModalVisible && (
-            <aside 
+            <div 
+              className='navbar__modal--area'
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}            
-              className='navbar__modal'
+              onMouseLeave={handleMouseLeave}
             >
-              <a href='/#'>
-                Feature #1.1
-              </a>
-              <a href='/#'>
-                Feature #1.2
-              </a>
-              <a href='/#'>
-                Feature #1.3
-              </a>
-            </aside>
+              <aside          
+                className='navbar__modal--features'
+              >
+                {new Array(10).fill(0).map((_, index) => (
+                  <a key={index} href='/#'>
+                    Feature #{index + 1}
+                  </a>
+                ))}
+              </aside>
+            </div>
           )}
         </div>
-        <a href='/#'>
+        <input placeholder='Search features' />
+        <a className='navbar__button' href='/#'>
           Log In
         </a>
-        <a href='/#'>
+        <a className='navbar__button' href='/#'>
           Sign Up
         </a>
       </nav>
