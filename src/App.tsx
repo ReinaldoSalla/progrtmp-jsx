@@ -9,12 +9,13 @@
 */
 
 import React from 'react';
-import Navbar from './components/Navbar';
-// import Profile from './components/Profile';
+// import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 import './App.css';
 
 const App = () => (
-  <Navbar />
+  // <Navbar />
+  <Profile />
 );
 
 export default App;
