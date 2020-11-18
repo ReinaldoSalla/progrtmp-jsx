@@ -1,6 +1,5 @@
 import React, { useState, FormEvent } from 'react';
 import Event from './Profile.types';
-import Button from '../Button';
 import './Profile.css';
 
 // const Space = ({ n }: any) => (
@@ -91,8 +90,8 @@ const Profile = (): JSX.Element => {
     event: FormEvent<HTMLFormElement>
   ): void => {
     event.preventDefault();
-    // alert(`Submitted data: ${JSON.stringify(formData)}`);
-  }
+    console.log(`Submitted data: ${JSON.stringify(formData)}`);
+  };
 
   const handleChange = ({
     target: { type, name, value, checked }}: Event
@@ -106,18 +105,17 @@ const Profile = (): JSX.Element => {
   return (
     <div className='profile__main--wrapper'>
       <form className='profile__form' onSubmit={handleSubmit}>
-        <h2 className='profile__title'>CompanyName</h2>
-        <h3 className='profile__title'>Submit Profile</h3>
-        <div className='profile__element'>
-          <label htmlFor='name'>Name</label>
+        <h2 className='profile__title'>Write Your Profile</h2>
+        <label className='profile__label' htmlFor='name'>Name</label>
+        <div className='profile__input--wrapper'>
           <input className='profile__input' name='name' id='name' value={formData.name} onChange={handleChange} type='text' />
         </div>
-        <div className='profile__element'>
-          <label htmlFor='birthday'>Birthday</label>
+        <label className='profile__label' htmlFor='birthday'>Birthday</label>
+        <div className='profile__input--wrapper'>
           <input className='profile__input' name='birthday' id='birthday' type='date' value={formData.birthday} onChange={handleChange} />
         </div>
-        <div className='profile__element'>
-          <label htmlFor='programming language'>Programming language</label>
+        <label className='profile__label' htmlFor='programming language'>Programming language</label>
+        <div className='profile__input--wrapper'>
           <select className='profile__input' name='progrLang' id='programming language' value={formData.progrLang} onChange={handleChange}>
             <option>C</option>
             <option>C++</option>
@@ -126,12 +124,12 @@ const Profile = (): JSX.Element => {
             <option>JavaScript</option>
           </select>
         </div>
-        <div className='profile__element'>
-          <label htmlFor='description'>Skills on {formData.progrLang}</label>
+        <label className='profile__label' htmlFor='description'>Skills on {formData.progrLang}</label>
+        <div className='profile__input--wrapper'>
           <textarea className='profile__input' name='description' id='description' value={formData.description} onChange={handleChange} />
         </div>
-        <div className='profile__element'>
-          <label htmlFor='experience'>Experience</label>
+        <label className='profile__label' htmlFor='experience'>Experience</label>
+        <div className='profile__input--wrapper'>
           <input className='profile__input' name='yearsOfExperience' id='experience' type='number' value={formData.yearsOfExperience} onChange={handleChange} />
         </div>
         <div className='profile__label--check--wrapper'>
