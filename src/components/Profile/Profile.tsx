@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import Event from './Profile.types';
+import Button from '../Button';
 import './Profile.css';
 
-const Space = ({ n }: any) => (
-  <>
-    {new Array(n).fill(0).map((_, index) => (
-      <br key={index} />
-    ))}
-  </>
-);
+// const Space = ({ n }: any) => (
+//   <>
+//     {new Array(n).fill(0).map((_, index) => (
+//       <br key={index} />
+//     ))}
+//   </>
+// );
 
 // const Profile = () => {
 //   const [name, setName] = useState('');
@@ -86,9 +87,16 @@ const Profile = (): JSX.Element => {
     isExpert: false,
   });
 
+  const handleSubmit = (
+    event: FormEvent<HTMLFormElement>
+  ): void => {
+    event.preventDefault();
+    // alert(`Submitted data: ${JSON.stringify(formData)}`);
+  }
+
   const handleChange = ({
-    target: { type, name, value, checked }
-  }: Event): void => {
+    target: { type, name, value, checked }}: Event
+  ): void => {
     setFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value
@@ -96,36 +104,47 @@ const Profile = (): JSX.Element => {
   };
 
   return (
-    <form>
-      <label htmlFor='name'>Name:</label>
-      <Space n={1} />
-      <input name='name' id='name' value={formData.name} onChange={handleChange} type='text' />
-      <Space n={2} />
-      <label htmlFor='birthday'>Birthday:</label>
-      <Space n={1} />
-      <input name='birthday' id='birthday' type='date' value={formData.birthday} onChange={handleChange} />
-      <Space n={2} />
-      <label htmlFor='programming language'>Programming language</label>
-      <Space n={1} />
-      <select name='progrLang' id='programming language' value={formData.progrLang} onChange={handleChange}>
-        <option>C</option>
-        <option>C++</option>
-        <option>Java</option>
-        <option>Python</option>
-        <option>JavaScript</option>
-      </select>
-      <Space n={2} />
-      <label htmlFor='description'>Skills on {formData.progrLang}</label>
-      <Space n={1} />
-      <textarea name='description' id='description' value={formData.description} onChange={handleChange} />
-      <Space n={2} />
-      <label htmlFor='experience'>Experience</label>
-      <Space n={1} />
-      <input name='yearsOfExperience' id='experience' type='number' value={formData.yearsOfExperience} onChange={handleChange} />
-      <Space n={2} />
-      <label htmlFor='expert'>Is an expert?</label>
-      <input name='isExpert' id='expert' type='checkbox' checked={formData.isExpert} onChange={handleChange} />
-    </form>
+    <div className='profile__main--wrapper'>
+      <form className='profile__form' onSubmit={handleSubmit}>
+        <h2 className='profile__title'>CompanyName</h2>
+        <h3 className='profile__title'>Submit Profile</h3>
+        <div className='profile__element'>
+          <label htmlFor='name'>Name</label>
+          <input className='profile__input' name='name' id='name' value={formData.name} onChange={handleChange} type='text' />
+        </div>
+        <div className='profile__element'>
+          <label htmlFor='birthday'>Birthday</label>
+          <input className='profile__input' name='birthday' id='birthday' type='date' value={formData.birthday} onChange={handleChange} />
+        </div>
+        <div className='profile__element'>
+          <label htmlFor='programming language'>Programming language</label>
+          <select className='profile__input' name='progrLang' id='programming language' value={formData.progrLang} onChange={handleChange}>
+            <option>C</option>
+            <option>C++</option>
+            <option>Java</option>
+            <option>Python</option>
+            <option>JavaScript</option>
+          </select>
+        </div>
+        <div className='profile__element'>
+          <label htmlFor='description'>Skills on {formData.progrLang}</label>
+          <textarea className='profile__input' name='description' id='description' value={formData.description} onChange={handleChange} />
+        </div>
+        <div className='profile__element'>
+          <label htmlFor='experience'>Experience</label>
+          <input className='profile__input' name='yearsOfExperience' id='experience' type='number' value={formData.yearsOfExperience} onChange={handleChange} />
+        </div>
+        <div className='profile__label--check--wrapper'>
+          <label htmlFor='expert'>Is an expert?</label>
+          <input name='isExpert' id='expert' type='checkbox' checked={formData.isExpert} onChange={handleChange} />
+        </div>
+        <div className='profile__button--wrapper'>
+          <button className='button' type='submit'>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

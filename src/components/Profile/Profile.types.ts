@@ -5,6 +5,7 @@ interface Event {
     value?: number | string;
     checked?: boolean;
   };
+  preventDefault: () => void;
 }
 
 export default Event;

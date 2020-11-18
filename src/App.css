@@ -2,6 +2,10 @@
   --navbar-height: 80px;
 }
 
+body, #root {
+  height: 100%;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -15,11 +19,26 @@ a {
   color: inherit;
 }
 
-/* button {
+button {
   font: inherit;
   padding: 0;
   margin: 0;
   border: none;
   color: inherit;
   background: none;
-} */
+}
+
+.button {
+  background: lightblue;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: opacity 500ms;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.5;
+}
