@@ -4,6 +4,9 @@
 
 body, #root {
   height: 100%;
+  background-color: aliceblue;
+  /* font-family: sans-serif; */
+  /* font-family: 'Segoe UI'; */
 }
 
 ul {
