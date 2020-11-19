@@ -19,13 +19,13 @@
 .banner__buttons--wrapper {
   display: flex;
   justify-content: center;
-  padding-right: 2rem;
   margin-top: 5rem;
 }
 
 .banner__img {
   width: 500px;
   height: 500px;
+  object-fit: fill;
 }
 
 @media only screen and (max-width: 962px) {
@@ -35,12 +35,20 @@
   }
 
   .banner__title {
-    margin: 5rem
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem 0;
   }
 
   .banner__img {
-    margin: 10rem;
+    width: 80%;
+    object-fit: fill;
+    margin: 5rem;
   }
+}
 
-
+@media only screen and (max-width: 576px) {
+  .banner__title {
+    font-size: 1.5rem;
+  }
 }
