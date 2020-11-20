@@ -22,10 +22,27 @@
   margin-top: 5rem;
 }
 
+.banner__loading {
+  width: 500px;
+  height: 500px;
+  background: gray;
+}
+
 .banner__img {
   width: 500px;
   height: 500px;
   object-fit: fill;
+  animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 962px) {
@@ -46,6 +63,7 @@
     margin: 5rem 8rem;
   }
 
+  .banner__loading,
   .banner__img {
     width: 80%;
     margin: 5rem 0;
