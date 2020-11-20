@@ -128,7 +128,7 @@ const Profile = (): JSX.Element => {
         <div className='profile__input--wrapper'>
           <textarea className='profile__input' name='description' id='description' value={formData.description} onChange={handleChange} />
         </div>
-        <label className='profile__label' htmlFor='experience'>Experience</label>
+        <label className='profile__label' htmlFor='experience'>Years of experience</label>
         <div className='profile__input--wrapper'>
           <input className='profile__input' name='yearsOfExperience' id='experience' type='number' value={formData.yearsOfExperience} onChange={handleChange} />
         </div>

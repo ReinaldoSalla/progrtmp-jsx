@@ -12,7 +12,7 @@
 
 .banner__title {
   font-size: 2.5rem;
-  margin: 0;  
+  margin: 0;
   width: 400px;
 }
 
@@ -31,24 +31,29 @@
 @media only screen and (max-width: 962px) {
   .banner__main--wrapper {
     flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .banner__info {
     height: auto;
   }
 
   .banner__title {
     font-size: 2rem;
     text-align: center;
-    margin: 5rem 0;
+    width: auto;
+    margin: 5rem 8rem;
   }
 
   .banner__img {
     width: 80%;
-    object-fit: fill;
-    margin: 5rem;
+    margin: 5rem 0;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .banner__title {
-    font-size: 1.5rem;
+    margin: 5rem 2rem;
   }
 }

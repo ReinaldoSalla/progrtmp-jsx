@@ -7,7 +7,6 @@ const Banner = () => {
       <section className='banner__info'>
         <h1 className='banner__title'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
         <div className='banner__buttons--wrapper'>
-          {/* <a className='button' href='/#'>Unkock features</a> */}
           <button className='button'>Load new image</button>
         </div>
       </section>
