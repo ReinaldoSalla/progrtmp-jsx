@@ -8,4 +8,13 @@ interface Event {
   preventDefault: () => void;
 }
 
-export default Event;
+interface FormData {
+  name: string;
+  birthday: string;
+  progrLang: string;
+  description: string;
+  yearsOfExperience: number;
+  isExpert: boolean;
+}
+
+export type { Event, FormData };

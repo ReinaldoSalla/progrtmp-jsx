@@ -1,10 +1,13 @@
 /*
-<Banner /> => html img
 <User /> => css background img and Sharing state
 <Statistics /> => html tables
 <Navbar />
 <Services />
 <Footer />
+html imgs mdn or w3c
+IntersectionObserver article
+progressive img manipulation
+<Banner /> => html img
 */
 
 import React from 'react';
@@ -22,9 +25,3 @@ const App = () => (
 );
 
 export default App;
-
-// import React from 'react';
-
-// const App = () => (
-//   <h1></h1>
-// )
