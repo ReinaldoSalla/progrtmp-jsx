@@ -1,4 +1,5 @@
 import { FormEvent } from 'react';
+import { Event } from '../Profile/Profile.types';
 
 interface FormData {
   name: string;
@@ -12,7 +13,7 @@ interface FormData {
 interface ProfileFormProps {
   formData: FormData;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  handleChange: any;
+  handleChange: (target: Event) => void;
 }
 
 export default ProfileFormProps;
