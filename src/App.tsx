@@ -11,16 +11,18 @@ progressive img manipulation
 */
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Profile from './components/Profile';
+// import Navbar from './components/Navbar';
+// import Banner from './components/Banner';
+// import Profile from './components/Profile';
+import List from './components/List';
 import './App.css';
 
 const App = () => (
   <>
-    <Navbar />
+    {/* <Navbar />
     <Banner />
-    <Profile />
+    <Profile /> */}
+    <List />
   </>
 );
 
