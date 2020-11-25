@@ -1,7 +1,7 @@
 interface ElementProps {
   name: string;
   description: string;
-  price: number;
+  price: string;
 }
 
 export default ElementProps;

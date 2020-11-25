@@ -1,19 +1,9 @@
-const products = [
+const products = new Array(12).fill(0).map((_) => (
   {
-    name: 'Car',
-    price: 50e3,
-    description: 'Car Lorem ipsum dolor sit amet, consectetur adipiscing elitdescription'
-  },
-  {
-    name: 'Apartment',
-    price: 500e3,
-    description: 'Apartment Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-  },
-  {
-    name: 'House',
-    price: 100e6,
-    description: 'House Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+    name: 'product name',
+    description: 'product description',
+    price: `$${1e6}`
   }
-];
+))
 
 export default products;

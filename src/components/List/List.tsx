@@ -5,7 +5,7 @@ import './List.css';
 
 const List = () => {
   return (
-    <div className='list__main--wrapper'>
+    <div className='list__main-wrapper'>
       {products.map(({ name, price, description}, index) => (
         <Element
           key={index} 
